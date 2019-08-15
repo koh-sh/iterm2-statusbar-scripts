@@ -21,8 +21,7 @@ async def main(connection):
             req = urllib.request.Request(url)
             with urllib.request.urlopen(req) as res:
                 body = res.read()
-            #return "PublicIP: " + str(body.decode()).replace("\n", "")
-            return "PublicIP: 123.45.67.890"
+            return "PublicIP: " + str(body.decode()).replace("\n", "")
         except Exception:
             return "No Connection"
 
